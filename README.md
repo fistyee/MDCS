@@ -1,13 +1,13 @@
 # MDCS 
 MDCS: More Diverse Experts with Consistency Self-distillation for Long-tailed Recognition [Official, ICCV 2023]
 
-## Citation
+## 0.Citation
 
 If you find our work inspiring or use our codebase in your research, please consider giving a star ⭐ and a citation.
 
 coming soon~
 
-##  training
+## 1.training
 
 ### (1) CIFAR100-LT 
 #### Training
