@@ -1,0 +1,63 @@
+{
+    "name": "Imbalance_CIFAR10LT_IR100_mdcs",
+    "n_gpu": 1,
+
+    "arch": {
+        "type": "ResNet32Model",
+        "args": {
+            "num_classes": 10,
+            "reduce_dimension": true,
+            "use_norm": true,
+            "returns_feat": true,
+            "num_experts": 3
+        }
+    },
+    "data_loader": {
+        "type": "ImbalanceCIFAR10DataLoader",
+        "args":{
+            "data_dir": "./data/cifar10",
+            "batch_size": 64,
+            "shuffle": true,
+            "num_workers": 4,
+            "imb_factor": 0.01
+        }
+    },
+    "optimizer": {
+        "type": "SGD",
+        "args":{
+            "lr": 0.1,
+            "weight_decay": 5e-4,
+            "momentum": 0.9,
+            "nesterov": true
+        }
+    },
+    "add_extra_info": true,
+    "loss": {
+        "type": "DiverseExpertLoss",
+        "args": {
+            "tau": 2 
+        }
+    },
+    "metrics": [
+        "accuracy"
+    ],
+    "lr_scheduler": {
+        "type": "CustomLR",
+        "args": {
+            "//": "200 epoch: step1:160, step2:180",
+            "step1": 200,
+            "step2": 320,
+            "step3": 380,
+            "gamma": 0.1,
+            "warmup_epoch": 5
+        }
+    },
+    "trainer": {
+        "epochs": 400,
+        "save_dir": "saved/cifar10/ir100/mdcs_e400_inv2_bs128_lr0.1",
+        "save_period": 100,
+        "verbosity": 2, 
+        "monitor": "max val_accuracy",
+        "tensorboard": false
+    }
+}
