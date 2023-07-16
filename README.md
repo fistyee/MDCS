@@ -41,11 +41,6 @@ python train.py -c configs/config_imagenet_lt_resnext50_mdcs_e400.json
 python test.py -r checkpoint_path
 ``` 
 
-* run:
-``` 
-python test_all_imagenet.py -r checkpoint_path
-``` 
-
 
 
  
@@ -54,7 +49,7 @@ python test_all_imagenet.py -r checkpoint_path
 #### Training
 * run:
 ```
-python train.py -c configs/config_places_lt_resnet152_mdcs.json
+python train_places.py -c configs/config_places_lt_resnet152_mdcs.json
 ```
 
 #### Evaluate
