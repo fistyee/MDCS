@@ -304,7 +304,7 @@ def cat_mask(t, mask1, mask2):
 
 
 
-class DiverseLoss(nn.Module):
+class MDCSLoss(nn.Module):
     def __init__(self, cls_num_list=None, max_m=0.5, s=30, tau=2):
         super().__init__()
         self.base_loss = F.cross_entropy
@@ -334,14 +334,7 @@ class DiverseLoss(nn.Module):
         self.per_cls_weights_enabled_diversity = torch.tensor(per_cls_weights, dtype=torch.float,
                                                               requires_grad=False).cuda()  # 这个是logits时算diversity loss的weight
 
-    def inverse_prior(self, prior):
-        
-        value, idx0 = torch.sort(prior)
-        _, idx1 = torch.sort(idx0)
-        idx2 = prior.shape[0] - 1 - idx1  # reverse the order
-        inverse_prior = value.index_select(0, idx2)
 
-        return inverse_prior
 
     def _hook_before_epoch(self, epoch):
         if self.reweight_epoch != -1:
@@ -367,9 +360,9 @@ class DiverseLoss(nn.Module):
 
         expert1_logits = extra_info['logits'][0] + torch.log(torch.pow(self.prior, -0.5) + 1e-9)      #head
 
-        expert2_logits = extra_info['logits'][1] + torch.log(torch.pow(self.prior, 1) + 1e-9)  # medium
+        expert2_logits = extra_info['logits'][1] + torch.log(torch.pow(self.prior, 1) + 1e-9)         #medium
 
-        expert3_logits = extra_info['logits'][2] + torch.log(torch.pow(self.prior, 2.5) + 1e-9)     #few
+        expert3_logits = extra_info['logits'][2] + torch.log(torch.pow(self.prior, 2.5) + 1e-9)       #few
 
 
 
