@@ -32,7 +32,7 @@
     },
     "add_extra_info": true,
     "loss": {
-        "type": "DiverseExpertLoss",
+        "type": "MDCSLoss",
         "args": {
              "tau": 1
         }
