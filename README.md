@@ -3,7 +3,7 @@ MDCS: More Diverse Experts with Consistency Self-distillation for Long-tailed Re
 
 ![image](https://github.com/fistyee/MDCS/assets/8428329/32407594-9767-4a44-b26f-67be6eb07acf)
 
-
+![MixPro](./fig2.png)
 ## 0.Citation
 
 If you find our work inspiring or use our codebase in your research, please consider giving a star ⭐ and a citation.
