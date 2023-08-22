@@ -1,5 +1,5 @@
 
-## MDCS: More Diverse Experts with Consistency Self-distillation for Long-tailed Recognition [Official, ICCV 2023[paper](https://arxiv.org/abs/2308.09922)] 🔥
+## MDCS: More Diverse Experts with Consistency Self-distillation for Long-tailed Recognition [Official, ICCV 2023, [Paper](https://arxiv.org/abs/2308.09922)] 🔥
 
 ### [Qihao Zhao](https://scholar.google.com/citations?hl=zh-CN&user=sECb19EAAAAJ)<sup>1,2</sup>, Chen Jiang<sup>1</sup>, [Wei Hu](https://scholar.google.com/citations?user=ACJickwAAAAJ&hl=zh-CN)<sup>1</sup>, [Fan Zhang](https://scholar.google.com/citations?user=CujOi1kAAAAJ&hl=zh-CN)<sup>1</sup>, [Jun Liu](https://scholar.google.com/citations?hl=zh-CN&user=Q5Ild8UAAAAJ)<sup>2</sup>
 
