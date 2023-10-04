@@ -10,10 +10,18 @@
 ![MixPro](./fig2.png)
 ## 0.Citation
 
+
 If you find our work inspiring or use our codebase in your research, please consider giving a star ⭐ and a citation.
-
-coming soon~
-
+```
+@InProceedings{Zhao_2023_ICCV,
+    author    = {Zhao, Qihao and Jiang, Chen and Hu, Wei and Zhang, Fan and Liu, Jun},
+    title     = {MDCS: More Diverse Experts with Consistency Self-distillation for Long-tailed Recognition},
+    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+    month     = {October},
+    year      = {2023},
+    pages     = {11597-11608}
+}
+```
 ## 1.training
 
 ### (1) CIFAR100-LT 
