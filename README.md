@@ -7,7 +7,7 @@
 
 2 Singapore University of Technology and Design
 
-![MixPro](./fig2.png)
+![MDCS](./fig2.png)
 ## 0.Citation
 
 
